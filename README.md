@@ -114,24 +114,43 @@ The app evaluates models on 6 key mental health classification tasks:
 
 ## Installation
 
-1. Clone the repository:
+### 1. Clone the repository with submodules:
 ```bash
-git clone https://github.com/yourusername/MentaBench.git
+# Clone with submodules (includes llama.cpp framework)
+git clone --recursive https://github.com/yourusername/MentaBench.git
 cd MentaBench
+
+# Or if you already cloned without --recursive:
+git submodule update --init --recursive
 ```
 
-2. Open the project in Xcode:
+### 2. Build llama.cpp framework:
+```bash
+cd llamacpp-framework
+./build-xcframework.sh
+cd ..
+```
+
+This will generate the `llamacpp_framework.xcframework` needed for the project.
+
+### 3. Download model files:
+
+Due to file size limitations, model files are not included in the repository. Download them separately:
+
+**Required Models:**
+- **Menta.gguf** (~2.3GB) - [Download Link](https://your-hosting-service/Menta.gguf)
+- **Phi-4-mini-instruct-Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/microsoft/phi-4-mini)
+- **qwen3-4b_Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/Qwen/Qwen3-4B-Instruct)
+
+Place downloaded `.gguf` files in the `MentaBench/` directory.
+
+### 4. Open and build the project:
 ```bash
 open MentaBench.xcodeproj
 ```
 
-3. Download model files:
-   - Models are stored in the app bundle
-   - Ensure all .gguf model files are included in the project
-
-4. Build and run:
-   - Select your target device
-   - Press Cmd+R to build and run
+- Select your target device (iOS 16.0+)
+- Press Cmd+R to build and run
 
 ## Usage
 
@@ -162,8 +181,9 @@ MentaBench/
 │   ├── BatchProcessor.swift      # Batch processing and memory management
 │   ├── DatasetLoader.swift       # Dataset loading utilities
 │   └── utils.swift                # Helper utilities
-├── llamacpp-framework/            # llama.cpp framework
-└── datasets/                      # Mental health datasets
+├── llamacpp-framework/            # llama.cpp submodule (Git Submodule)
+├── datasets/                      # Mental health datasets
+└── SETUP.md                       # Detailed setup instructions
 ```
 
 ## Performance Metrics
