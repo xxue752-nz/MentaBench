@@ -118,6 +118,8 @@ ENV/
 !LICENSE.md
 !CONTRIBUTING.md
 !REQUIREMENTS.md
+!SETUP.md
+!GITHUB_PUSH.md
 
 # Python scripts (if not needed)
 *.py
