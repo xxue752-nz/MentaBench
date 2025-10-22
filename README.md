@@ -101,8 +101,6 @@ The app evaluates models on 6 key mental health classification tasks:
 | **Menta** | 4B | Mental Health Fine-tuned | F32 | 2.3GB | Primary evaluation target |
 | **Phi-4-mini** | 3.8B | General reasoning | Q4_K_M | 2.3GB | General-purpose baseline |
 | **Qwen3-4B-Instruct** | 4B | Instruction following | Q4_K_M | 2.3GB | Base model baseline |
-| StableSLM-3B | 3B | Efficient inference | F16 | 5.2GB | Additional comparison |
-| Falcon-1.3B | 1.3B | Edge deployment | Q8_0 | Variable | Additional comparison |
 
 ## Requirements
 
