@@ -136,9 +136,9 @@ This will generate the `llamacpp_framework.xcframework` needed for the project.
 Due to file size limitations, model files are not included in the repository. Download them separately:
 
 **Required Models:**
-- **Menta.gguf** (~2.3GB) - [Download Link](https://your-hosting-service/Menta.gguf)
-- **Phi-4-mini-instruct-Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/microsoft/phi-4-mini)
-- **qwen3-4b_Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/Qwen/Qwen3-4B-Instruct)
+- **Menta.gguf** (~2.3GB) - [Download Link](https://huggingface.co/mHealthAI/Menta)
+- **Phi-4-mini-instruct-Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/microsoft/Phi-4-mini-instruct)
+- **qwen3-4b_Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507)
 
 Place downloaded `.gguf` files in the `MentaBench/` directory.
 
