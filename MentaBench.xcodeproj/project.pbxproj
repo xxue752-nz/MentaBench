@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40D066C6EBC94A1B80D55D8A /* DatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D51A3172D4B73BCA7B4D4 /* DatasetLoader.swift */; };
+		4383336C2C0E5040001AA2C0 /* MentalHealthAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383336B2C0E5040001AA2C0 /* MentalHealthAIApp.swift */; };
+		4383336E2C0E5040001AA2C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383336D2C0E5040001AA2C0 /* ContentView.swift */; };
+		438333702C0E5040001AA2C0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383336F2C0E5040001AA2C0 /* Item.swift */; };
+		438333722C0E5041001AA2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438333712C0E5041001AA2C0 /* Assets.xcassets */; };
+		438333752C0E5041001AA2C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438333742C0E5041001AA2C0 /* Preview Assets.xcassets */; };
+		438333862C0E51BD001AA2C0 /* LlamaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383337C2C0E51BC001AA2C0 /* LlamaState.swift */; };
+		438333882C0E51BD001AA2C0 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383337E2C0E51BC001AA2C0 /* utils.swift */; };
+		4383338A2C0E51BD001AA2C0 /* LibLlama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438333802C0E51BC001AA2C0 /* LibLlama.swift */; };
+		4383339C2C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438333942C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework */; };
+		4383339D2C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 438333942C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4383340B2C0E9032001AA2C0 /* vqav2 in Resources */ = {isa = PBXBuildFile; fileRef = 438334092C0E9032001AA2C0 /* vqav2 */; };
+		4383340E2C0EA576001AA2C0 /* scienceqa in Resources */ = {isa = PBXBuildFile; fileRef = 4383340D2C0EA576001AA2C0 /* scienceqa */; };
+		438334DD2C12511C001AA2C0 /* datasets in Resources */ = {isa = PBXBuildFile; fileRef = 438334DC2C12511C001AA2C0 /* datasets */; };
+		764BA28C2E9E5FDE00A0F604 /* BatchProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764BA28B2E9E5FDE00A0F604 /* BatchProcessor.swift */; };
+		764BA28E2E9E5FF200A0F604 /* PredictionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764BA28D2E9E5FF200A0F604 /* PredictionParser.swift */; };
+		768538792EA671430002A2F4 /* StableSLM-3B-f16.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 768538782EA671430002A2F4 /* StableSLM-3B-f16.gguf */; };
+		76945FA32E9E59E60027903A /* Menta.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 76945FA22E9E59E60027903A /* Menta.gguf */; };
+		76B2F4F82EA6844500FE14AA /* Falcon-1.3B-q8_0.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 76B2F4F72EA6844500FE14AA /* Falcon-1.3B-q8_0.gguf */; };
+		76DC7D6A2E99072100DCEBDD /* qwen3-4b_Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 76DC7D692E99072100DCEBDD /* qwen3-4b_Q4_K_M.gguf */; };
+		76DC7D6F2E99ED5F00DCEBDD /* Phi-4-mini-instruct-Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 76DC7D6E2E99ED5F00DCEBDD /* Phi-4-mini-instruct-Q4_K_M.gguf */; };
+		76DC7D712E9C7AD800DCEBDD /* 1744667894355.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76DC7D702E9C7AD800DCEBDD /* 1744667894355.jpg */; };
+		76FF07BF2E9F9B1300FCA721 /* PromptGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF07BE2E9F9B1300FCA721 /* PromptGenerator.swift */; };
+		A44803BEBE704EE5B58D3739 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E997357F0634D77B1879995 /* Tasks.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		438333A12C0E5345001AA2C0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4383339D2C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		438333682C0E5040001AA2C0 /* MentalHealthAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalHealthAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4383336B2C0E5040001AA2C0 /* MentalHealthAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalHealthAIApp.swift; sourceTree = "<group>"; };
+		4383336D2C0E5040001AA2C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4383336F2C0E5040001AA2C0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		438333712C0E5041001AA2C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		438333742C0E5041001AA2C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4383337C2C0E51BC001AA2C0 /* LlamaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LlamaState.swift; sourceTree = "<group>"; };
+		4383337E2C0E51BC001AA2C0 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		438333802C0E51BC001AA2C0 /* LibLlama.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibLlama.swift; sourceTree = "<group>"; };
+		438333942C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MentaBench/llamacpp_framework.xcframework; sourceTree = "<group>"; };
+		438333FA2C0E6C54001AA2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		438334022C0E7050001AA2C0 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
+		438334042C0E7055001AA2C0 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/iOSSupport/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
+		438334062C0E705B001AA2C0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		438334092C0E9032001AA2C0 /* vqav2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vqav2; sourceTree = "<group>"; };
+		4383340D2C0EA576001AA2C0 /* scienceqa */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scienceqa; sourceTree = "<group>"; };
+		438334842C118C05001AA2C0 /* ggml-quants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-quants.h"; sourceTree = "<group>"; };
+		438334852C118C05001AA2C0 /* ggml-alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ggml-alloc.c"; sourceTree = "<group>"; };
+		438334862C118C05001AA2C0 /* multimodal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multimodal.h; sourceTree = "<group>"; };
+		438334872C118C05001AA2C0 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		438334882C118C05001AA2C0 /* build-info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "build-info.cpp"; sourceTree = "<group>"; };
+		438334892C118C05001AA2C0 /* sampling.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sampling.cpp; sourceTree = "<group>"; };
+		4383348A2C118C05001AA2C0 /* ggml-quants.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ggml-quants.c"; sourceTree = "<group>"; };
+		4383348B2C118C05001AA2C0 /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unicode.cpp; sourceTree = "<group>"; };
+		4383348C2C118C05001AA2C0 /* ggml-metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-metal.h"; sourceTree = "<group>"; };
+		4383348D2C118C05001AA2C0 /* llama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = llama.h; sourceTree = "<group>"; };
+		4383348E2C118C05001AA2C0 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
+		4383348F2C118C05001AA2C0 /* llava-cli.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "llava-cli.cpp"; sourceTree = "<group>"; };
+		438334902C118C05001AA2C0 /* ggml-metal.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = "ggml-metal.metal"; sourceTree = "<group>"; };
+		438334912C118C05001AA2C0 /* ggml-backend.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ggml-backend.c"; sourceTree = "<group>"; };
+		438334922C118C05001AA2C0 /* llava.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = llava.cpp; sourceTree = "<group>"; };
+		438334932C118C05001AA2C0 /* clip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clip.h; sourceTree = "<group>"; };
+		438334942C118C05001AA2C0 /* grammar-parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "grammar-parser.cpp"; sourceTree = "<group>"; };
+		438334952C118C05001AA2C0 /* llama.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = llama.cpp; sourceTree = "<group>"; };
+		438334962C118C05001AA2C0 /* llava.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = llava.h; sourceTree = "<group>"; };
+		438334972C118C05001AA2C0 /* sgemm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sgemm.h; sourceTree = "<group>"; };
+		438334982C118C06001AA2C0 /* ggml-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-common.h"; sourceTree = "<group>"; };
+		438334992C118C06001AA2C0 /* ggml-alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-alloc.h"; sourceTree = "<group>"; };
+		4383349A2C118C06001AA2C0 /* llava_cli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = llava_cli.h; sourceTree = "<group>"; };
+		4383349B2C118C06001AA2C0 /* base64.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = base64.hpp; sourceTree = "<group>"; };
+		4383349C2C118C06001AA2C0 /* unicode-data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "unicode-data.cpp"; sourceTree = "<group>"; };
+		4383349D2C118C06001AA2C0 /* ggml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ggml.c; sourceTree = "<group>"; };
+		4383349E2C118C06001AA2C0 /* unicode-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "unicode-data.h"; sourceTree = "<group>"; };
+		4383349F2C118C06001AA2C0 /* multimodal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = multimodal.mm; sourceTree = "<group>"; };
+		438334A02C118C06001AA2C0 /* sgemm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sgemm.cpp; sourceTree = "<group>"; };
+		438334A12C118C06001AA2C0 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		438334A22C118C06001AA2C0 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		438334A32C118C06001AA2C0 /* ggml-backend-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-backend-impl.h"; sourceTree = "<group>"; };
+		438334A42C118C06001AA2C0 /* clip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = clip.cpp; sourceTree = "<group>"; };
+		438334A52C118C06001AA2C0 /* ggml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggml.h; sourceTree = "<group>"; };
+		438334A62C118C06001AA2C0 /* ggml-metal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ggml-metal.m"; sourceTree = "<group>"; };
+		438334A72C118C06001AA2C0 /* grammar-parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "grammar-parser.h"; sourceTree = "<group>"; };
+		438334A82C118C06001AA2C0 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
+		438334A92C118C06001AA2C0 /* json-schema-to-grammar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "json-schema-to-grammar.cpp"; sourceTree = "<group>"; };
+		438334AA2C118C06001AA2C0 /* ggml-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-impl.h"; sourceTree = "<group>"; };
+		438334AB2C118C06001AA2C0 /* sampling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampling.h; sourceTree = "<group>"; };
+		438334AC2C118C06001AA2C0 /* json-schema-to-grammar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "json-schema-to-grammar.h"; sourceTree = "<group>"; };
+		438334AD2C118C06001AA2C0 /* ggml-backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-backend.h"; sourceTree = "<group>"; };
+		438334AE2C118C06001AA2C0 /* unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicode.h; sourceTree = "<group>"; };
+		438334DC2C12511C001AA2C0 /* datasets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = datasets; sourceTree = "<group>"; };
+		764BA28B2E9E5FDE00A0F604 /* BatchProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchProcessor.swift; sourceTree = "<group>"; };
+		764BA28D2E9E5FF200A0F604 /* PredictionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionParser.swift; sourceTree = "<group>"; };
+		768538782EA671430002A2F4 /* StableSLM-3B-f16.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StableSLM-3B-f16.gguf"; sourceTree = "<group>"; };
+		76945FA22E9E59E60027903A /* Menta.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Menta.gguf; sourceTree = "<group>"; };
+		76B2F4F72EA6844500FE14AA /* Falcon-1.3B-q8_0.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Falcon-1.3B-q8_0.gguf"; sourceTree = "<group>"; };
+		76DC7D692E99072100DCEBDD /* qwen3-4b_Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qwen3-4b_Q4_K_M.gguf"; sourceTree = "<group>"; };
+		76DC7D6E2E99ED5F00DCEBDD /* Phi-4-mini-instruct-Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Phi-4-mini-instruct-Q4_K_M.gguf"; sourceTree = "<group>"; };
+		76DC7D702E9C7AD800DCEBDD /* 1744667894355.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1744667894355.jpg; sourceTree = "<group>"; };
+		76FF07BE2E9F9B1300FCA721 /* PromptGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptGenerator.swift; sourceTree = "<group>"; };
+		8E997357F0634D77B1879995 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		D20D51A3172D4B73BCA7B4D4 /* DatasetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasetLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		438333652C0E5040001AA2C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4383339C2C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4383335F2C0E5040001AA2C0 = {
+			isa = PBXGroup;
+			children = (
+				4383336A2C0E5040001AA2C0 /* MentaBench */,
+				438333952C0E5345001AA2C0 /* llamacpp-framework */,
+				438333692C0E5040001AA2C0 /* Products */,
+				438334012C0E7050001AA2C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		438333692C0E5040001AA2C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				438333682C0E5040001AA2C0 /* MentalHealthAI.app */,
+				438333942C0E5345001AA2C0 /* MentaBench/llamacpp_framework.xcframework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4383336A2C0E5040001AA2C0 /* MentaBench */ = {
+			isa = PBXGroup;
+			children = (
+				76B2F4F72EA6844500FE14AA /* Falcon-1.3B-q8_0.gguf */,
+				76DC7D6E2E99ED5F00DCEBDD /* Phi-4-mini-instruct-Q4_K_M.gguf */,
+				76DC7D692E99072100DCEBDD /* qwen3-4b_Q4_K_M.gguf */,
+				438334DC2C12511C001AA2C0 /* datasets */,
+				4383340D2C0EA576001AA2C0 /* scienceqa */,
+				438334092C0E9032001AA2C0 /* vqav2 */,
+				438333FA2C0E6C54001AA2C0 /* Info.plist */,
+				438333802C0E51BC001AA2C0 /* LibLlama.swift */,
+				4383337C2C0E51BC001AA2C0 /* LlamaState.swift */,
+				4383337E2C0E51BC001AA2C0 /* utils.swift */,
+				8E997357F0634D77B1879995 /* Tasks.swift */,
+				D20D51A3172D4B73BCA7B4D4 /* DatasetLoader.swift */,
+				4383336B2C0E5040001AA2C0 /* MentalHealthAIApp.swift */,
+				4383336D2C0E5040001AA2C0 /* ContentView.swift */,
+				4383336F2C0E5040001AA2C0 /* Item.swift */,
+				438333712C0E5041001AA2C0 /* Assets.xcassets */,
+				438333732C0E5041001AA2C0 /* Preview Content */,
+				76DC7D702E9C7AD800DCEBDD /* 1744667894355.jpg */,
+				76945FA22E9E59E60027903A /* Menta.gguf */,
+				764BA28B2E9E5FDE00A0F604 /* BatchProcessor.swift */,
+				764BA28D2E9E5FF200A0F604 /* PredictionParser.swift */,
+				76FF07BE2E9F9B1300FCA721 /* PromptGenerator.swift */,
+				768538782EA671430002A2F4 /* StableSLM-3B-f16.gguf */,
+			);
+			path = MentaBench;
+			sourceTree = "<group>";
+		};
+		438333732C0E5041001AA2C0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				438333742C0E5041001AA2C0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		438333952C0E5345001AA2C0 /* llamacpp-framework */ = {
+			isa = PBXGroup;
+			children = (
+				4383349B2C118C06001AA2C0 /* base64.hpp */,
+				438334882C118C05001AA2C0 /* build-info.cpp */,
+				438334A42C118C06001AA2C0 /* clip.cpp */,
+				438334932C118C05001AA2C0 /* clip.h */,
+				438334A82C118C06001AA2C0 /* common.cpp */,
+				438334872C118C05001AA2C0 /* common.h */,
+				438334852C118C05001AA2C0 /* ggml-alloc.c */,
+				438334992C118C06001AA2C0 /* ggml-alloc.h */,
+				438334A32C118C06001AA2C0 /* ggml-backend-impl.h */,
+				438334912C118C05001AA2C0 /* ggml-backend.c */,
+				438334AD2C118C06001AA2C0 /* ggml-backend.h */,
+				438334982C118C06001AA2C0 /* ggml-common.h */,
+				438334AA2C118C06001AA2C0 /* ggml-impl.h */,
+				4383348C2C118C05001AA2C0 /* ggml-metal.h */,
+				438334A62C118C06001AA2C0 /* ggml-metal.m */,
+				438334902C118C05001AA2C0 /* ggml-metal.metal */,
+				4383348A2C118C05001AA2C0 /* ggml-quants.c */,
+				438334842C118C05001AA2C0 /* ggml-quants.h */,
+				4383349D2C118C06001AA2C0 /* ggml.c */,
+				438334A52C118C06001AA2C0 /* ggml.h */,
+				438334942C118C05001AA2C0 /* grammar-parser.cpp */,
+				438334A72C118C06001AA2C0 /* grammar-parser.h */,
+				438334A92C118C06001AA2C0 /* json-schema-to-grammar.cpp */,
+				438334AC2C118C06001AA2C0 /* json-schema-to-grammar.h */,
+				4383348E2C118C05001AA2C0 /* json.hpp */,
+				438334952C118C05001AA2C0 /* llama.cpp */,
+				4383348D2C118C05001AA2C0 /* llama.h */,
+				4383349A2C118C06001AA2C0 /* llava_cli.h */,
+				4383348F2C118C05001AA2C0 /* llava-cli.cpp */,
+				438334922C118C05001AA2C0 /* llava.cpp */,
+				438334962C118C05001AA2C0 /* llava.h */,
+				438334A22C118C06001AA2C0 /* log.h */,
+				438334862C118C05001AA2C0 /* multimodal.h */,
+				4383349F2C118C06001AA2C0 /* multimodal.mm */,
+				438334892C118C05001AA2C0 /* sampling.cpp */,
+				438334AB2C118C06001AA2C0 /* sampling.h */,
+				438334A02C118C06001AA2C0 /* sgemm.cpp */,
+				438334972C118C05001AA2C0 /* sgemm.h */,
+				438334A12C118C06001AA2C0 /* stb_image.h */,
+				4383349C2C118C06001AA2C0 /* unicode-data.cpp */,
+				4383349E2C118C06001AA2C0 /* unicode-data.h */,
+				4383348B2C118C05001AA2C0 /* unicode.cpp */,
+				438334AE2C118C06001AA2C0 /* unicode.h */,
+			);
+			path = "llamacpp-framework";
+			sourceTree = "<group>";
+		};
+		438334012C0E7050001AA2C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438334062C0E705B001AA2C0 /* Accelerate.framework */,
+				438334042C0E7055001AA2C0 /* MetalKit.framework */,
+				438334022C0E7050001AA2C0 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		438333672C0E5040001AA2C0 /* MentalHealthAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 438333782C0E5041001AA2C0 /* Build configuration list for PBXNativeTarget "MentalHealthAI" */;
+			buildPhases = (
+				438333642C0E5040001AA2C0 /* Sources */,
+				438333652C0E5040001AA2C0 /* Frameworks */,
+				438333662C0E5040001AA2C0 /* Resources */,
+				438333A12C0E5345001AA2C0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MentalHealthAI;
+			productName = MentalHealthAI;
+			productReference = 438333682C0E5040001AA2C0 /* MentalHealthAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		438333602C0E5040001AA2C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					438333672C0E5040001AA2C0 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 438333632C0E5040001AA2C0 /* Build configuration list for PBXProject "MentaBench" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4383335F2C0E5040001AA2C0;
+			productRefGroup = 438333692C0E5040001AA2C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				438333672C0E5040001AA2C0 /* MentalHealthAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		438333662C0E5040001AA2C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438333752C0E5041001AA2C0 /* Preview Assets.xcassets in Resources */,
+				438333722C0E5041001AA2C0 /* Assets.xcassets in Resources */,
+				76945FA32E9E59E60027903A /* Menta.gguf in Resources */,
+				4383340B2C0E9032001AA2C0 /* vqav2 in Resources */,
+				76DC7D6F2E99ED5F00DCEBDD /* Phi-4-mini-instruct-Q4_K_M.gguf in Resources */,
+				76B2F4F82EA6844500FE14AA /* Falcon-1.3B-q8_0.gguf in Resources */,
+				768538792EA671430002A2F4 /* StableSLM-3B-f16.gguf in Resources */,
+				438334DD2C12511C001AA2C0 /* datasets in Resources */,
+				76DC7D712E9C7AD800DCEBDD /* 1744667894355.jpg in Resources */,
+				76DC7D6A2E99072100DCEBDD /* qwen3-4b_Q4_K_M.gguf in Resources */,
+				4383340E2C0EA576001AA2C0 /* scienceqa in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		438333642C0E5040001AA2C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76FF07BF2E9F9B1300FCA721 /* PromptGenerator.swift in Sources */,
+				438333882C0E51BD001AA2C0 /* utils.swift in Sources */,
+				4383336E2C0E5040001AA2C0 /* ContentView.swift in Sources */,
+				438333702C0E5040001AA2C0 /* Item.swift in Sources */,
+				4383336C2C0E5040001AA2C0 /* MentalHealthAIApp.swift in Sources */,
+				764BA28C2E9E5FDE00A0F604 /* BatchProcessor.swift in Sources */,
+				764BA28E2E9E5FF200A0F604 /* PredictionParser.swift in Sources */,
+				438333862C0E51BD001AA2C0 /* LlamaState.swift in Sources */,
+				4383338A2C0E51BD001AA2C0 /* LibLlama.swift in Sources */,
+				A44803BEBE704EE5B58D3739 /* Tasks.swift in Sources */,
+				40D066C6EBC94A1B80D55D8A /* DatasetLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		438333762C0E5041001AA2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2X5JPK77W5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		438333772C0E5041001AA2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2X5JPK77W5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		438333792C0E5041001AA2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MobileAIBench/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MentaBench/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxue752.project;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4383337A2C0E5041001AA2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MobileAIBench/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MentaBench/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxue752.project;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		438333632C0E5040001AA2C0 /* Build configuration list for PBXProject "MentaBench" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				438333762C0E5041001AA2C0 /* Debug */,
+				438333772C0E5041001AA2C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		438333782C0E5041001AA2C0 /* Build configuration list for PBXNativeTarget "MentalHealthAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				438333792C0E5041001AA2C0 /* Debug */,
+				4383337A2C0E5041001AA2C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 438333602C0E5040001AA2C0 /* Project object */;
+}
